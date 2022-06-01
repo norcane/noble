@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
 <h:head>
     <title>Hello World - Demo</title>
@@ -9,7 +10,26 @@
 
 <h:body>
 
-    <p>Hello World: #{testV.text}</p>
+    <p>Hello World!</p>
+
+    <p:panel id="horizontal" header="Horizontal Toggle" toggleable="true" toggleOrientation="horizontal">
+        <h:panelGrid columns="2" cellpadding="10">
+            <img src="https://images.unsplash.com/photo-1545289415-50dff9405935?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=250&amp;q=80"/>
+
+            <h:outputText value="#{testV.text}"/>
+        </h:panelGrid>
+    </p:panel>
+
+    <h:form>
+        <p:commandButton type="button" value="Primary" />
+        <p:commandButton type="button" value="Secondary" styleClass="ui-button-secondary" />
+        <p:commandButton type="button" value="Success" styleClass="ui-button-success" />
+        <p:commandButton type="button" value="Info" styleClass="ui-button-info" />
+        <p:commandButton type="button" value="Warning" styleClass="ui-button-warning" />
+        <p:commandButton type="button" value="Help" styleClass="ui-button-help" />
+        <p:commandButton type="button" value="Danger" styleClass="ui-button-danger" />
+    </h:form>
+
 
 </h:body>
 
