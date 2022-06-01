@@ -46,6 +46,11 @@
             <artifactId>primefaces-spring-boot-starter</artifactId>
             <version>${joinfaces.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.joinfaces</groupId>
+            <artifactId>omnifaces-spring-boot-starter</artifactId>
+            <version>${joinfaces.version}</version>
+        </dependency>
 
         <!-- Jakarta EE -->
         <dependency>

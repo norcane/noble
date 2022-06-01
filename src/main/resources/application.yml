@@ -1,0 +1,3 @@
+joinfaces:
+  omnifaces:
+    faces-views-scan-paths: /*.xhtml
