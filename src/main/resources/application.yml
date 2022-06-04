@@ -1,5 +1,0 @@
-joinfaces:
-  omnifaces:
-    faces-views-scan-paths: /*.xhtml
-  primefaces:
-    theme: nova-light
