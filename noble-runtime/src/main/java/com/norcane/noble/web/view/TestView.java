@@ -29,6 +29,7 @@
  */
 package com.norcane.noble.web.view;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
 
@@ -36,9 +37,10 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @ApplicationScope
 public class TestView {
 
-    private final String text = "text from bean";
+    @Value("${noble.test-variable}")
+    private String testVariable;
 
     public String getText() {
-        return text;
+        return "text from bean: " + testVariable;
     }
 }
