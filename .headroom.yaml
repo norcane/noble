@@ -48,3 +48,7 @@ variables:
   project: "noble :: norcane blog engine"
   year: "2022"
   author: norcane
+
+license-headers:
+  xml:
+    file-extensions: [ "xml", "xhtml" ]
