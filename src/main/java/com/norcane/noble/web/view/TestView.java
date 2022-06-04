@@ -27,7 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package com.norcane.noble.view;
+package com.norcane.noble.web.view;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
