@@ -26,7 +26,8 @@ html, body {
 .login-wrapper > div:first-child {
     flex: 2;
 
-    background: blue;
+    background: url("#{resource['images/login-background.jpg']}");
+    background-size: cover;
 }
 
 .login-wrapper > div:last-child {
