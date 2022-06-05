@@ -53,17 +53,18 @@
                 </div>
 
                 <h:form>
+                    <p:focus/>
                     <div class="card">
                         <div class="ui-fluid">
                             <div class="p-field">
-                                <p:inputText id="username" placeholder="Username"/>
+                                <p:inputText id="username" placeholder="#{msg['login.username']}"/>
                             </div>
                             <div class="p-field">
-                                <p:password id="password" placeholder="Password"/>
+                                <p:password id="password" placeholder="#{msg['login.password']}"/>
                             </div>
                         </div>
                         <div class="submit-wrapper">
-                            <p:commandButton value="Log in"/>
+                            <p:commandButton value="#{msg['login.do-login']}"/>
                         </div>
                     </div>
                 </h:form>
