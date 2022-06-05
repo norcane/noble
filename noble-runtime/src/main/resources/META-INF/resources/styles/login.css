@@ -1,0 +1,50 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.login-wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.login-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.login-wrapper > div:first-child {
+    flex: 2;
+
+    background: blue;
+}
+
+.login-wrapper > div:last-child {
+    align-items: center;
+    justify-content: center;
+
+    background: var(--background-color);
+    color: var(--foreground-color);
+}
+
+.login-wrapper > div:last-child > .content > .logo {
+    text-align: center;
+}
+
+.login-wrapper > div:last-child > .content > .logo > img {
+    width: 200px;
+}
+
+.login-wrapper > div:last-child > .content .submit-wrapper {
+    text-align: right;
+}
