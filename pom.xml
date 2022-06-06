@@ -19,6 +19,7 @@
     <modules>
         <module>noble-api</module>
         <module>noble-runtime</module>
+        <module>examples/demo-blog</module>
     </modules>
 
     <properties>
