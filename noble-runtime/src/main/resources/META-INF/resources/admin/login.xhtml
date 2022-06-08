@@ -32,8 +32,14 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+    <f:viewParam name="action" value="#{loginV.action}"/>
+    <f:viewAction action="#{loginV.handleAction}"/>
+</f:metadata>
 
 <h:head>
     <title>Hello World - LOGIN</title>
@@ -52,8 +58,9 @@
                     <p:graphicImage library="images" name="noble-logo-light.png" styleClass="logo"/>
                 </div>
 
-                <h:form>
+                <h:form id="loginForm" class="login-form" prependId="false">
                     <p:focus/>
+                    <p:messages id="login-messages" showDetail="true" closable="false"/>
                     <div class="card">
                         <div class="ui-fluid">
                             <div class="p-field">
@@ -64,7 +71,7 @@
                             </div>
                         </div>
                         <div class="submit-wrapper">
-                            <p:commandButton value="#{msg['login.do-login']}"/>
+                            <p:commandButton value="#{msg['login.do-login']}" ajax="false"/>
                         </div>
                     </div>
                 </h:form>

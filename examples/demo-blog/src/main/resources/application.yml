@@ -2,7 +2,7 @@ spring:
   config:
     import: noble-defaults.yml
   datasource:
-    url: jdbc:h2:mem:mydb
+    url: jdbc:h2:/tmp/noble-h2;AUTO_SERVER=TRUE
     username: sa
     password: password
     driverClassName: org.h2.Driver
