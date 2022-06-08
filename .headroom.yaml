@@ -29,7 +29,9 @@ source-paths:
 ## 'source-paths' and such paths will be excluded from processing. Same as
 ## '-e|--excluded-path=REGEX' command line argument (can be used multiple times
 ## for more than one path).
-excluded-paths: [ ]
+excluded-paths:
+  - pom.xml
+  - noble-runtime/target/
 
 ## If set to 'true', Headroom tries to detect whether any VCS (like GIT) is used
 ## for current project and if yes, it loads rules for ignored files and excludes
