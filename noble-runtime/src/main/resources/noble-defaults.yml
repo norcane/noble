@@ -1,4 +1,6 @@
 joinfaces:
+  jsf:
+    facelets-skip-comments: true
   omnifaces:
     faces-views-scan-paths: /*.xhtml
 
@@ -6,3 +8,7 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/changelog-root.xml
+
+noble:
+  vendor:
+    copyright: Copyright © 2022 norcane

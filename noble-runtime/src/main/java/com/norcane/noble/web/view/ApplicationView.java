@@ -29,12 +29,18 @@
  */
 package com.norcane.noble.web.view;
 
-import jakarta.faces.application.FacesMessage;
-import jakarta.faces.context.FacesContext;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.ApplicationScope;
 
-public abstract class FacesView {
+@Component("applicationV")
+@ApplicationScope
+public class ApplicationView extends FacesView {
 
-    protected void addFacesMessage(FacesMessage message) {
-        FacesContext.getCurrentInstance().addMessage(null, message);
+    @Value("${noble.vendor.copyright}")
+    private String copyright;
+
+    public String getCopyright() {
+        return copyright;
     }
 }

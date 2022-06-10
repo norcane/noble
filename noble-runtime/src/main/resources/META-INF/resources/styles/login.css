@@ -34,7 +34,7 @@ html, body {
     align-items: center;
     justify-content: center;
 
-    background: var(--background-color);
+    background: var(--background-color-2);
     color: var(--foreground-color);
 }
 
