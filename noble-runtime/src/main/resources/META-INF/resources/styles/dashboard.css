@@ -80,7 +80,8 @@ html, body {
     padding-left: 32px !important;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a:hover {
+.dashboard-container > .navigation > form > .navigation-menu > ul > li > a:hover,
+.dashboard-container > .navigation > form > .navigation-menu > ul > li.selected-menu > a {
     background: var(--background-color-2) !important;
 }
 
