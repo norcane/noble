@@ -55,8 +55,12 @@
 
             <h:form>
                 <p:menu styleClass="navigation-menu">
-                    <p:submenu label="Submenu 1">
-                        <p:menuitem value="Label 1" icon="pi pi-save"/>
+                    <p:submenu label="Blog">
+                        <p:menuitem outcome="/admin/dashboard" value="Dashboard" icon="pi pi-chart-bar"/>
+                    </p:submenu>
+                    <p:separator />
+                    <p:submenu label="User">
+                        <p:menuitem outcome="/admin/dashboard" value="User Settings" icon="pi pi-user-edit"/>
                     </p:submenu>
                 </p:menu>
             </h:form>
@@ -65,9 +69,22 @@
                 <h:outputText value="#{applicationV.copyright}"/>
             </div>
         </div>
-        <div class="content">
-            content
-            <p><a href="#{request.contextPath}/logout">Logout</a></p>
+
+        <div class="content-wrapper">
+            <div class="topbar">
+                <h1>dashboard</h1>
+                <div class="menu"><a href="#{request.contextPath}/logout">Logout</a></div>
+            </div>
+
+            <div class="content">
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+                content<br />content<br />content<br />content<br />content<br />content<br />content<br />
+            </div>
         </div>
     </div>
 </h:body>

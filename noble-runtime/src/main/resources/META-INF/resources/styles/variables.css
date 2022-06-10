@@ -1,13 +1,14 @@
 
 :root {
     --background-color-1: #282828;
-    --background-color-2: #EEEEEE;
-    --background-color-3: #FFFFFF;
+    --background-color-2: #a4b0be;
+    --background-color-3: #EEEEEE;
+    --background-color-4: #FFFFFF;
     --foreground-color: #222831;
     --fg-color-inv: #EEEEEE;
 }
 
 [data-theme="dark"] {
-    --background-color-2: #222831;
+    --background-color-3: #222831;
     --foreground-color: #EEEEEE;
 }

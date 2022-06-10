@@ -30,20 +30,39 @@ html, body {
     width: 200px;
 }
 
+.dashboard-container > .navigation > form {
+    overflow-x: clip;
+    overflow-y: auto;
+}
+
 .dashboard-container > .navigation > form > .navigation-menu {
     width: 100%;
-    margin-top: 50px;
     text-align: left;
 
     background: initial;
     border: none;
 }
 
+.dashboard-container > .navigation > form > .navigation-menu:first-of-type {
+    margin-top: 50px;
+}
+
+.dashboard-container > .navigation > form > .navigation-menu .ui-divider {
+    margin: 1em 16px;
+}
+
+.dashboard-container > .navigation > form > .navigation-menu .ui-divider:before {
+    border-top: 1px solid var(--background-color-2);
+    border-left-width: 0;
+    border-right-width: 0;
+    width: 268px;
+}
+
 .dashboard-container > .navigation > form > .navigation-menu > ul > li,
 .dashboard-container > .navigation > form > .navigation-menu > ul > li > h3,
 .dashboard-container > .navigation > form > .navigation-menu > ul > li > a > span {
     background: initial !important;
-    color: var(--background-color-3) !important;
+    color: var(--background-color-4) !important;
 }
 
 .dashboard-container > .navigation > form > .navigation-menu > ul > li > h3,
@@ -62,11 +81,15 @@ html, body {
 }
 
 .dashboard-container > .navigation > form > .navigation-menu > ul > li > a:hover {
-    background: var(--background-color-3) !important;
+    background: var(--background-color-4) !important;
 }
 
 .dashboard-container > .navigation > form > .navigation-menu > ul > li > a:hover > span {
     color: var(--background-color-1) !important;
+}
+
+.dashboard-container > .navigation > form > .navigation-menu > ul > li > a > span.ui-menuitem-icon {
+    color: #c9a759 !important;
 }
 
 .dashboard-container > .navigation > .copyright {
@@ -81,10 +104,42 @@ html, body {
     padding: 32px 16px;
 }
 
-.dashboard-container > .content {
+.dashboard-container > .content-wrapper {
     flex: 1;
-    padding: 50px;
+    overflow: auto;
 
-    background: var(--background-color-2);
+    background: var(--background-color-3);
+}
+
+.dashboard-container > .content-wrapper > .topbar {
+    display: flex;
+    position: fixed;
+    left: 300px;
+    right: 0;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 32px;
+
+    background: var(--background-color-4);
+    box-shadow: 0 4px 2px -2px var(--background-color-2);
+}
+
+.dashboard-container > .content-wrapper > .topbar > h1 {
+    display: inline-block;
+    margin: 0;
+    line-height: 64px;
+
+    color: var(--foreground-color);
+    font-size: 32px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.dashboard-container > .content-wrapper > .topbar > .menu {
+    display: inline-block;
+}
+
+.dashboard-container > .content-wrapper > .content {
+    padding: 96px 32px 32px 32px;
 }
 
