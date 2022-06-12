@@ -54,15 +54,31 @@
             </div>
 
             <h:form>
-                <p:menu styleClass="navigation-menu">
-                    <p:submenu label="Blog">
-                        <p:menuitem outcome="/admin/dashboard" value="Dashboard" icon="pi pi-chart-bar"/>
-                    </p:submenu>
-                    <p:separator/>
-                    <p:submenu label="User">
-                        <p:menuitem outcome="/admin/dashboard" value="User Settings" icon="pi pi-user-edit"/>
-                    </p:submenu>
-                </p:menu>
+                <ul>
+                    <li>
+                        <p:link outcome="/admin/dashboard">
+                            <i class="pi pi-chart-bar"/><span>Dashboard</span>
+                        </p:link>
+                    </li>
+                    <li>
+                        <p:link outcome="/admin/dashboard" styleClass="active">
+                            <i class="pi pi-folder-open"/><span>Posts</span>
+                        </p:link>
+                        <ul>
+                            <li>
+                                <a href="#">All Posts</a>
+                            </li>
+                            <li>
+                                <a href="#">Add New</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p:link outcome="/admin/dashboard">
+                            <i class="pi pi-cog"/><span>User</span>
+                        </p:link>
+                    </li>
+                </ul>
             </h:form>
 
             <div class="copyright">

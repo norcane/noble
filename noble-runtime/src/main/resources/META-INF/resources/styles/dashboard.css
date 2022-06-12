@@ -35,58 +35,41 @@ html, body {
     overflow-y: auto;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu {
+.dashboard-container > .navigation > form ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-container > .navigation > form ul li a {
+    display: inline-block;
     width: 100%;
-    text-align: left;
 
-    background: initial;
-    border: none;
+    color: var(--fg-color-inv);
+    text-decoration: none;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu:first-of-type {
-    margin-top: 50px;
+.dashboard-container > .navigation > form ul li a i {
+    margin-right: 1em;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu .ui-divider {
-    margin: 1em 16px;
+.dashboard-container > .navigation > form > ul > li > a {
+    padding: 1em;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu .ui-divider:before {
-    border-top: 1px solid var(--background-color-3);
-    border-left-width: 0;
-    border-right-width: 0;
-    width: 268px;
+.dashboard-container > .navigation > form > ul > li > a:hover,
+.dashboard-container > .navigation > form > ul > li > a.active {
+    background: var(--fg-highlight-inv);
 }
 
-.dashboard-container > .navigation > form > .navigation-menu > ul > li,
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > h3,
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a > span {
-    background: initial !important;
-    color: var(--background-color-5) !important;
+.dashboard-container > .navigation > form > ul > li > ul > li > a {
+    padding: 10px 16px;
+
+    background: var(--background-color-2);
+    font-size: .8em;
 }
 
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > h3,
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a > span.ui-menuitem-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > h3 {
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a {
-    padding-left: 32px !important;
-}
-
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a:hover,
-.dashboard-container > .navigation > form > .navigation-menu > ul > li.selected-menu > a {
-    background: var(--background-color-2) !important;
-}
-
-.dashboard-container > .navigation > form > .navigation-menu > ul > li > a > span.ui-menuitem-icon {
-    color: #c9a759 !important;
+.dashboard-container > .navigation > form > ul > li > ul > li > a:hover {
+    color: var(--fg-highlight-inv);
 }
 
 .dashboard-container > .navigation > .copyright {
