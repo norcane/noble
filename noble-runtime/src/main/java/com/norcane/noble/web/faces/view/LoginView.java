@@ -27,7 +27,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package com.norcane.noble.web.view;
+package com.norcane.noble.web.faces.view;
+
+import com.norcane.noble.web.faces.NobleFacesContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -45,7 +47,9 @@ public class LoginView extends FacesView {
     private final LocaleView localeView;
 
     @Autowired
-    public LoginView(LocaleView localeView) {
+    public LoginView(LocaleView localeView,
+                     NobleFacesContext nobleFacesContext) {
+        super(nobleFacesContext);
         this.localeView = localeView;
     }
 

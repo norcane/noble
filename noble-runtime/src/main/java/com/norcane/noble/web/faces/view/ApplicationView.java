@@ -27,20 +27,28 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package com.norcane.noble.web.view;
+package com.norcane.noble.web.faces.view;
 
+import com.norcane.noble.web.faces.NobleFacesContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
 
-@Component("testV")
+@Component("applicationV")
 @ApplicationScope
-public class TestView {
+public class ApplicationView extends FacesView {
 
-    @Value("${noble.test-variable}")
-    private String testVariable;
+    @Autowired
+    public ApplicationView(NobleFacesContext nobleFacesContext) {
+        super(nobleFacesContext);
+    }
 
-    public String getText() {
-        return "text from bean: " + testVariable;
+    @Value("${noble.vendor.copyright}")
+    private String copyright;
+
+    public String getCopyright() {
+        return copyright;
     }
 }

@@ -27,18 +27,21 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package com.norcane.noble.web.view;
+package com.norcane.noble.web.faces.view;
+
+import com.norcane.noble.web.faces.NobleFacesContext;
 
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.context.FacesContext;
 
 public abstract class FacesView {
 
-    protected void addFacesMessage(FacesMessage message) {
-        FacesContext.getCurrentInstance().addMessage(null, message);
+    protected final NobleFacesContext nobleFacesContext;
+
+    public FacesView(NobleFacesContext nobleFacesContext) {
+        this.nobleFacesContext = nobleFacesContext;
     }
 
-    protected String currentViewId() {
-        return FacesContext.getCurrentInstance().getViewRoot().getViewId().split("\\.")[0];
+    protected void addFacesMessage(FacesMessage message) {
+        nobleFacesContext.facesContext().addMessage(null, message);
     }
 }

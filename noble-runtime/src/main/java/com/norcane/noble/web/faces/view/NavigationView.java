@@ -1,5 +1,8 @@
-package com.norcane.noble.web.view;
+package com.norcane.noble.web.faces.view;
 
+import com.norcane.noble.web.faces.NobleFacesContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
 
@@ -7,12 +10,17 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @ApplicationScope
 public class NavigationView extends FacesView {
 
+    @Autowired
+    public NavigationView(NobleFacesContext nobleFacesContext) {
+        super(nobleFacesContext);
+    }
+
     public boolean isCurrentView(String outcome) {
-        return currentViewId().equals(outcome);
+        return nobleFacesContext.currentViewId().equals(outcome);
     }
 
     public boolean hasActiveSubmenu(String outcome) {
-        final String viewIdPrefix = stripSubmenu(currentViewId());
+        final String viewIdPrefix = stripSubmenu(nobleFacesContext.currentViewId());
         final String outcomePrefix = stripSubmenu(outcome);
 
         return viewIdPrefix.equals(outcomePrefix);
