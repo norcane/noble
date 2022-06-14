@@ -23,8 +23,7 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>18</java.version>
 
         <joinfaces.version>5.0.0-m3</joinfaces.version>
         <jakarta-validation-api.version>3.0.2</jakarta-validation-api.version>
