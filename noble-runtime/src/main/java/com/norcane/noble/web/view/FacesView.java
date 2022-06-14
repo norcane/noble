@@ -37,4 +37,8 @@ public abstract class FacesView {
     protected void addFacesMessage(FacesMessage message) {
         FacesContext.getCurrentInstance().addMessage(null, message);
     }
+
+    protected String currentViewId() {
+        return FacesContext.getCurrentInstance().getViewRoot().getViewId().split("\\.")[0];
+    }
 }

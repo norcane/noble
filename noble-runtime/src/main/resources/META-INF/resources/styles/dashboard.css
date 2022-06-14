@@ -68,8 +68,17 @@ html, body {
     font-size: .8em;
 }
 
+.dashboard-container > .navigation > form > ul > li > ul > li > a > i {
+    display: none;
+}
+
 .dashboard-container > .navigation > form > ul > li > ul > li > a:hover {
     color: var(--fg-highlight-inv);
+}
+
+.dashboard-container > .navigation > form > ul > li > ul > li > a.active {
+    color: var(--fg-highlight-inv);
+    font-weight: bold;
 }
 
 .dashboard-container > .navigation > .copyright {

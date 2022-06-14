@@ -48,18 +48,47 @@
 </h:head>
 
 <h:body>
-    <ui:composition template="/templates/main.xhtml">
-        <ui:define name="content">
-            <h:outputText value="#{view.viewId}"/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-            content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
-        </ui:define>
-    </ui:composition>
+
+    <div class="dashboard-container">
+        <div class="navigation" id="navigation">
+            <div class="logo">
+                <p:graphicImage library="images" name="noble-logo-dark.png" styleClass="logo"/>
+            </div>
+
+            <h:form>
+                <n:mainMenu>
+                    <n:mainMenuItem outcome="/admin/dashboard" label="Dashboard" icon="pi pi-chart-bar"/>
+                    <n:mainMenuItem outcome="/admin/posts/all" label="Posts" icon="pi pi-folder-open">
+                        <n:mainMenu>
+                            <n:mainMenuItem outcome="/admin/posts/all" label="All Posts"/>
+                            <n:mainMenuItem outcome="/admin/posts/new" label="Add New"/>
+                        </n:mainMenu>
+                    </n:mainMenuItem>
+                </n:mainMenu>
+            </h:form>
+
+            <div class="copyright">
+                <h:outputText value="#{applicationV.copyright}"/>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="topbar">
+                <h1>dashboard</h1>
+                <div class="menu"><a href="#{request.contextPath}/logout">Logout</a></div>
+            </div>
+
+            <div class="content">
+                <ui:insert name="content"/>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document
+            .querySelector('.dashboard-container > .navigation > form > ul > li > ul > li > a.active')
+            .parentNode.parentNode.previousElementSibling.classList.add('active');
+    </script>
 </h:body>
 
 </html>
