@@ -13,7 +13,7 @@
 <h:body>
     <ui:composition>
         <li>
-            <p:link outcome="#{outcome}" styleClass="#{navigationV.isCurrentView(outcome) ? 'active' : ''}">
+            <p:link outcome="#{outcome}" styleClass="#{navigationV.hasActiveSubmenu(outcome)? 'active' : ''}">
                 <i class="#{icon}"/><span>#{label}</span>
             </p:link>
             <ui:insert/>

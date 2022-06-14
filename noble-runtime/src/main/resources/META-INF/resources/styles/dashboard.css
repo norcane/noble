@@ -61,15 +61,15 @@ html, body {
     background: var(--fg-highlight-inv);
 }
 
+.dashboard-container > .navigation > form > ul > li > a:not(.active) + ul {
+    display:none;
+}
+
 .dashboard-container > .navigation > form > ul > li > ul > li > a {
     padding: 10px 16px;
 
     background: var(--background-color-2);
     font-size: .8em;
-}
-
-.dashboard-container > .navigation > form > ul > li > ul > li > a > i {
-    display: none;
 }
 
 .dashboard-container > .navigation > form > ul > li > ul > li > a:hover {

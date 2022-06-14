@@ -6,12 +6,28 @@
         version="2.0">
     <namespace>https://norcane.com/jsf/noble</namespace>
     <tag>
-        <tag-name>mainMenu</tag-name>
-        <source>tags/mainMenu.xhtml</source>
+        <tag-name>menu</tag-name>
+        <source>tags/menu.xhtml</source>
     </tag>
     <tag>
-        <tag-name>mainMenuItem</tag-name>
-        <source>tags/mainMenuItem.xhtml</source>
+        <tag-name>menuItem</tag-name>
+        <source>tags/menuItem.xhtml</source>
+        <attribute>
+            <name>outcome</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>label</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>icon</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>subMenuItem</tag-name>
+        <source>tags/subMenuItem.xhtml</source>
         <attribute>
             <name>outcome</name>
             <required>true</required>

@@ -56,15 +56,15 @@
             </div>
 
             <h:form>
-                <n:mainMenu>
-                    <n:mainMenuItem outcome="/admin/dashboard" label="Dashboard" icon="pi pi-chart-bar"/>
-                    <n:mainMenuItem outcome="/admin/posts/all" label="Posts" icon="pi pi-folder-open">
-                        <n:mainMenu>
-                            <n:mainMenuItem outcome="/admin/posts/all" label="All Posts"/>
-                            <n:mainMenuItem outcome="/admin/posts/new" label="Add New"/>
-                        </n:mainMenu>
-                    </n:mainMenuItem>
-                </n:mainMenu>
+                <n:menu>
+                    <n:menuItem outcome="/admin/dashboard" label="Dashboard" icon="pi pi-chart-bar"/>
+                    <n:menuItem outcome="/admin/posts/all" label="Posts" icon="pi pi-folder-open">
+                        <n:menu>
+                            <n:subMenuItem outcome="/admin/posts/all" label="All Posts"/>
+                            <n:subMenuItem outcome="/admin/posts/new" label="Add New"/>
+                        </n:menu>
+                    </n:menuItem>
+                </n:menu>
             </h:form>
 
             <div class="copyright">
@@ -83,12 +83,6 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        document
-            .querySelector('.dashboard-container > .navigation > form > ul > li > ul > li > a.active')
-            .parentNode.parentNode.previousElementSibling.classList.add('active');
-    </script>
 </h:body>
 
 </html>

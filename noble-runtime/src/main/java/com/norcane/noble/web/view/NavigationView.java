@@ -10,4 +10,15 @@ public class NavigationView extends FacesView {
     public boolean isCurrentView(String outcome) {
         return currentViewId().equals(outcome);
     }
+
+    public boolean hasActiveSubmenu(String outcome) {
+        final String viewIdPrefix = stripSubmenu(currentViewId());
+        final String outcomePrefix = stripSubmenu(outcome);
+
+        return viewIdPrefix.equals(outcomePrefix);
+    }
+
+    private String stripSubmenu(String path) {
+        return path.substring(0, path.lastIndexOf("/"));
+    }
 }
