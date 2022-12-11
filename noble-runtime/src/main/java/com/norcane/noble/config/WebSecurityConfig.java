@@ -35,11 +35,11 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain httpSecurity(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-            .antMatchers(STATIC_RESOURCES).permitAll()
-            .antMatchers("/admin/login", "/admin/logout").permitAll()
-            //.antMatchers("/admin/**").authenticated()
-            .antMatchers("/**").permitAll()
+        http.authorizeHttpRequests()
+            .requestMatchers(STATIC_RESOURCES).permitAll()
+            .requestMatchers("/admin/login", "/admin/logout").permitAll()
+            .requestMatchers("/admin/**").authenticated()
+            .requestMatchers("/**").permitAll()
             .and()
             .formLogin().loginPage("/admin/login").failureUrl("/admin/login?action=login_failure")
             .and()

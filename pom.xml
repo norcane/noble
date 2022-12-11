@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0-M4</version>
+        <version>3.0.0</version>
         <relativePath/>
     </parent>
 
@@ -23,9 +23,9 @@
     </modules>
 
     <properties>
-        <java.version>18</java.version>
+        <java.version>19</java.version>
 
-        <joinfaces.version>5.0.0-m3</joinfaces.version>
+        <joinfaces.version>5.0.0</joinfaces.version>
         <jakarta-validation-api.version>3.0.2</jakarta-validation-api.version>
     </properties>
 
